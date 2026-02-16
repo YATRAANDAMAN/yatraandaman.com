@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap:
+https://yatraandaman.github.io/yatraandaman.com/sitemap.xml
