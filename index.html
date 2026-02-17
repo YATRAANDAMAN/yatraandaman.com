@@ -3,81 +3,165 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yatra Andaman | Luxury Andaman Holidays</title>
+<title>Yatra Andaman | Premium Andaman Tour Packages</title>
+
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-</head>
 
+</head>
 <body>
 
+<!-- HEADER -->
 <header>
   <div class="logo">Yatra Andaman</div>
   <nav>
-    <a href="#packages">Packages</a>
-    <a href="#destinations">Destinations</a>
-    <a href="#reviews">Reviews</a>
-    <a href="https://wa.me/919679548741?text=Hello%20Yatra%20Andaman,%20I%20want%20package%20details" class="btn">WhatsApp</a>
+    <a href="#home">Home</a>
+    <a href="#packages">Tour Packages</a>
+    <a href="#activities">Activities</a>
+    <a href="#contact">Contact</a>
   </nav>
+  <a href="tel:+919679548741" class="call-btn">Call Now</a>
 </header>
 
-<section class="hero">
-  <div class="hero-content">
-    <h1>Luxury Andaman Holidays</h1>
-    <p>Port Blair • Havelock • Neil • Baratang</p>
-    <a href="https://wa.me/919679548741?text=Hello%20I%20want%20Andaman%20package%20details" class="hero-btn">Plan My Trip</a>
+<!-- HERO SECTION -->
+<section class="hero" id="home">
+  <div class="hero-overlay">
+    <div class="hero-text">
+      <h1>Explore Andaman With Yatra Andaman</h1>
+      <p>Best Tour Packages | Hotels | Ferry | Cab | Water Sports</p>
+    </div>
+
+    <!-- BOOKING FORM -->
+    <div class="booking-form">
+      <h2>Book Your Trip</h2>
+      <form id="bookingForm">
+        <input type="text" placeholder="Full Name" required>
+        <input type="tel" placeholder="Mobile Number" required>
+        <input type="email" placeholder="Email">
+        <input type="date" required>
+        <input type="number" placeholder="Adults" min="1">
+        <input type="number" placeholder="Children">
+        <input type="number" placeholder="Rooms">
+        
+        <select>
+          <option>Select Package</option>
+          <option>3N 4D Port Blair</option>
+          <option>4N 5D Havelock</option>
+          <option>5N 6D Romantic</option>
+          <option>6N 7D Family</option>
+          <option>Complete Andaman</option>
+        </select>
+
+        <textarea placeholder="Special Request"></textarea>
+        <button type="submit">Submit Enquiry</button>
+      </form>
+    </div>
+
   </div>
 </section>
 
+<!-- PACKAGES SECTION -->
 <section id="packages" class="section">
   <h2>Premium Tour Packages</h2>
-  <div class="cards">
 
-    <div class="card">
+  <div class="package-grid">
+
+    <div class="package-card">
       <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="">
-      <h3>4N/5D – Port Blair + Havelock</h3>
-      <p>Cellular Jail • Radhanagar Beach • Water Sports</p>
-      <span>Starting from ₹18,999</span>
-      <a href="https://wa.me/919679548741?text=I%20am%20interested%20in%204N5D%20package" class="card-btn">Enquire</a>
+      <h3>3N 4D Port Blair</h3>
+      <p>Cellular Jail • Corbyn Cove • Ross Island</p>
+      <span>Starting ₹14,999</span>
+      <button>Enquire Now</button>
     </div>
 
-    <div class="card">
+    <div class="package-card">
       <img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98" alt="">
-      <h3>5N/6D – Port Blair + Havelock + Neil</h3>
-      <p>Natural Bridge • Bharatpur Beach • Sunset Views</p>
-      <span>Starting from ₹24,999</span>
-      <a href="https://wa.me/919679548741?text=I%20am%20interested%20in%205N6D%20package" class="card-btn">Enquire</a>
+      <h3>4N 5D Havelock Special</h3>
+      <p>Radhanagar Beach • Elephant Beach</p>
+      <span>Starting ₹19,999</span>
+      <button>Enquire Now</button>
     </div>
 
-    <div class="card">
+    <div class="package-card">
       <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1" alt="">
-      <h3>6N/7D – Complete Andaman</h3>
-      <p>Baratang Caves • Mud Volcano • Island Cruise</p>
-      <span>Starting from ₹29,999</span>
-      <a href="https://wa.me/919679548741?text=I%20am%20interested%20in%206N7D%20package" class="card-btn">Enquire</a>
+      <h3>5N 6D Romantic Package</h3>
+      <p>Honeymoon Setup • Beach Candle Light</p>
+      <span>Starting ₹29,999</span>
+      <button>Enquire Now</button>
+    </div>
+
+    <div class="package-card">
+      <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1" alt="">
+      <h3>6N 7D Family Fun</h3>
+      <p>Neil Island • Baratang • Water Sports</p>
+      <span>Starting ₹34,999</span>
+      <button>Enquire Now</button>
+    </div>
+
+    <div class="package-card">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="">
+      <h3>Complete Andaman Explorer</h3>
+      <p>Port Blair • Havelock • Neil • Baratang</p>
+      <span>Starting ₹39,999</span>
+      <button>Enquire Now</button>
     </div>
 
   </div>
 </section>
 
-<section id="destinations" class="section dark">
-  <h2>Top Destinations</h2>
-  <p>Explore Havelock Island, Neil Island, Baratang Limestone Caves & Historic Port Blair with local experts.</p>
-</section>
+<!-- ACTIVITIES SECTION -->
+<section id="activities" class="section dark">
+  <h2>Top Water Activities</h2>
 
-<section id="reviews" class="section">
-  <h2>Guest Reviews</h2>
-  <div class="reviews">
-    <div class="review">“Amazing service & smooth coordination!” ⭐⭐⭐⭐⭐</div>
-    <div class="review">“Best Andaman trip experience.” ⭐⭐⭐⭐⭐</div>
-    <div class="review">“Professional team & great hotels.” ⭐⭐⭐⭐⭐</div>
+  <div class="activity-scroll">
+
+    <div class="activity-card">
+      <h3>Scuba Diving</h3>
+      <p>Starting ₹3,500</p>
+    </div>
+
+    <div class="activity-card">
+      <h3>Sea Walk</h3>
+      <p>Starting ₹3,000</p>
+    </div>
+
+    <div class="activity-card">
+      <h3>Snorkeling</h3>
+      <p>Starting ₹800</p>
+    </div>
+
+    <div class="activity-card">
+      <h3>Parasailing</h3>
+      <p>Starting ₹2,500</p>
+    </div>
+
+    <div class="activity-card">
+      <h3>Jet Ski</h3>
+      <p>Starting ₹700</p>
+    </div>
+
   </div>
 </section>
 
-<footer>
-  <p>© 2026 Yatra Andaman | All Rights Reserved</p>
+<!-- REVIEWS -->
+<section class="section">
+  <h2>Guest Reviews ⭐⭐⭐⭐⭐</h2>
+  <div class="reviews">
+    <div class="review-card">Amazing coordination & support!</div>
+    <div class="review-card">Best Andaman tour experience.</div>
+    <div class="review-card">Professional & trusted team.</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <h3>Yatra Andaman</h3>
+  <p>Nimbutala, Rangat, North & Middle Andaman</p>
+  <p>📞 9679548741 | 9434267939</p>
+  <p>© 2026 Yatra Andaman. All Rights Reserved.</p>
 </footer>
 
-<a href="https://wa.me/919679548741?text=Hello%20Yatra%20Andaman" class="floating-wa">💬</a>
+<script src="script.js"></script>
 
 </body>
 </html>
