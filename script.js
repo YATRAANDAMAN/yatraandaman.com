@@ -11,20 +11,21 @@ document.getElementById("bookingForm").addEventListener("submit", function(e) {
     const packageName = this.querySelector("select").value;
     const messageBox = this.querySelector("textarea").value;
 
-    const message = `Hello Yatra Andaman,%0A
-Name: ${name}%0A
-Mobile: ${mobile}%0A
-Email: ${email}%0A
-Travel Date: ${date}%0A
-Adults: ${adults}%0A
-Children: ${children}%0A
-Rooms: ${rooms}%0A
-Package: ${packageName}%0A
+    const message =
+`Hello Yatra Andaman,
+
+Name: ${name}
+Mobile: ${mobile}
+Email: ${email}
+Travel Date: ${date}
+Adults: ${adults}
+Children: ${children}
+Rooms: ${rooms}
+Package: ${packageName}
 Special Request: ${messageBox}`;
 
-    // WhatsApp redirect
-    window.open(https://wa.me/919679548741?text=${message}, "_blank");
+ const encodedMessage = encodeURIComponent(message);
 
-    // Email redirect
-    window.location.href = mailto:yatraandaman@gmail.com?subject=New Booking Enquiry&body=${message};
+    // WhatsApp open
+    window.open(https://wa.me/919679548741?text=${encodedMessage}, "_blank");
 });
