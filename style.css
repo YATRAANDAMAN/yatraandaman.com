@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -10,16 +11,17 @@ body {
   color: #222;
 }
 
+/* HEADER */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 8%;
   background: white;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   position: fixed;
   width: 100%;
   z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .logo {
@@ -29,51 +31,92 @@ header {
 }
 
 nav a {
-  margin-left: 20px;
+  margin: 0 12px;
   text-decoration: none;
   color: #333;
   font-weight: 500;
 }
 
-.btn {
-  background: #25D366;
+.call-btn {
+  background: #ff3b3b;
   color: white;
-  padding: 8px 14px;
+  padding: 8px 16px;
   border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
 }
 
+/* HERO */
 .hero {
   height: 100vh;
   background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  color: white;
+  padding-top: 80px;
 }
 
-.hero-content {
-  background: rgba(0,0,0,0.5);
+.hero-overlay {
+  background: rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
   padding: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 18px;
+}
+
+/* BOOKING FORM */
+.booking-form {
+  background: white;
+  padding: 25px;
   border-radius: 10px;
+  width: 320px;
+  color: black;
 }
 
-.hero h1 {
-  font-size: 48px;
+.booking-form h2 {
   margin-bottom: 15px;
+  text-align: center;
 }
 
-.hero-btn {
-  display: inline-block;
-  margin-top: 20px;
-  background: #ff7b00;
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.booking-form button {
+  width: 100%;
+  padding: 10px;
+  background: #0077b6;
   color: white;
-  padding: 12px 25px;
-  border-radius: 30px;
-  text-decoration: none;
+  border: none;
+  border-radius: 5px;
   font-weight: 600;
+  cursor: pointer;
 }
 
+/* SECTION */
 .section {
   padding: 80px 8%;
   text-align: center;
@@ -81,99 +124,123 @@ nav a {
 
 .section h2 {
   margin-bottom: 40px;
-  font-size: 32px;
+  font-size: 30px;
   color: #0077b6;
 }
 
-.cards {
+/* PACKAGES */
+.package-grid {
   display: flex;
   gap: 20px;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
-.card {
+.package-card {
   background: white;
+  width: 280px;
   border-radius: 12px;
   overflow: hidden;
-  width: 300px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.08);
   transition: 0.3s;
 }
 
-.card:hover {
+.package-card:hover {
   transform: translateY(-8px);
 }
 
-.card img {
+.package-card img {
   width: 100%;
-  height: 200px;
+  height: 180px;
   object-fit: cover;
 }
 
-.card h3 {
-  padding: 15px;
-  font-size: 18px;
+.package-card h3 {
+  padding: 10px;
 }
 
-.card p {
-  padding: 0 15px;
+.package-card p {
+  padding: 0 10px;
   font-size: 14px;
   color: #555;
 }
 
-.card span {
+.package-card span {
   display: block;
-  padding: 15px;
+  padding: 10px;
   font-weight: 600;
   color: #ff7b00;
 }
 
-.card-btn {
-  display: block;
-  margin: 10px 15px 20px;
+.package-card button {
+  margin: 10px;
+  padding: 8px 15px;
   background: #0077b6;
   color: white;
-  padding: 10px;
-  border-radius: 25px;
-  text-decoration: none;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
+/* ACTIVITIES */
 .dark {
   background: #0077b6;
   color: white;
 }
 
-.reviews {
+.activity-scroll {
   display: flex;
+  overflow-x: auto;
   gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
+  padding-bottom: 20px;
 }
 
-.review {
+.activity-card {
+  min-width: 200px;
   background: white;
+  color: black;
   padding: 20px;
   border-radius: 10px;
-  width: 250px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-}
-
-footer {
-  background: #111;
-  color: white;
-  padding: 20px;
   text-align: center;
 }
 
-.floating-wa {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
+/* REVIEWS */
+.reviews {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.review-card {
+  background: white;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* FOOTER */
+footer {
+  background: #111;
   color: white;
-  font-size: 24px;
-  padding: 12px 15px;
-  border-radius: 50%;
-  text-decoration: none;
+  text-align: center;
+  padding: 30px 10px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero-overlay {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .booking-form {
+    margin-top: 20px;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
