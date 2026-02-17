@@ -7,21 +7,23 @@
 }
 
 body {
-  background: #f4f8fb;
-  color: #222;
+    padding-top: 80px;   /* header ki height ke hisaab se adjust karo */
+}
 }
 
 /* HEADER */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 8%;
-  background: white;
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background: white;
+    position: fixed;
+    top: 0;              /* Ye missing tha */
+    left: 0;             /* Add karo */
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .logo {
@@ -74,7 +76,7 @@ nav a {
 
 .hero-text h1 {
   font-size: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 .hero-text p {
